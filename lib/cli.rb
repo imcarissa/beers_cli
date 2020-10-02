@@ -16,7 +16,8 @@ class CLI
       puts ""
       prompt
       if input == input.to_i > 0 && input.to_i <= 24
-      elsif
+      
+    else
         puts "Please enter a number from the list"
       end
     end
@@ -36,3 +37,15 @@ class CLI
     puts ""
   end
 end
+
+  def beer_details(info)
+    puts "Name: #{info.name}"
+    puts "ABV: #{info.abv}"
+    puts "Tagline: #{info.tagline}"
+    puts "Description: #{info.description}"
+    puts "Food Pairing: #{info.food_pairing}"
+  end
+  
+end
+    
+    
