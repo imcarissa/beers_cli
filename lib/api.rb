@@ -7,9 +7,9 @@ class API
     
     beers = JSON.parse(response)
     beers.each do |b|
-    binding.pry
-      Beer.new(name: b[], abv_gt: b[], food: b[]) if b[] != nil
+      Beer.new(name: b["name"], abv: b["abv"], style: b["style"], food: b["food"]) if b["name"] != ""
     end
+  #  binding.pry
   end
   
 #  def self.get_beers(beer)

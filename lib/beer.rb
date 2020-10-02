@@ -1,12 +1,13 @@
 class Beer
   
-  attr_accessor :name, :abv_gt, :food
+  attr_accessor :name, :abv, :style, :food
   
   @@all = []
   
-  def initialize(name:, abv_gt:, food:)
+  def initialize(name:, abv:, style: food:)
     @name = name
-    @abv_gt = abv_gt
+    @abv = abv
+    @style = style
     @food = food
     @@all << self
   end
