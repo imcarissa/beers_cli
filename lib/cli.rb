@@ -21,6 +21,8 @@ class CLI
         puts Beer.all.tagline[0]
         puts Beer.all.description[1]
       elsif input.to_i > 0 && input.to_i <= 24
+      API.get_beer_info
+      print_beers
     end
   end
 end
