@@ -1,0 +1,7 @@
+#!usr/bin/env ruby
+
+require 'pry'
+require 'HTTParty'
+require 'JSON'
+
+require_relative '../lib/cli'
