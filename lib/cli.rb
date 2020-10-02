@@ -1,25 +1,25 @@
 class CLI 
   
   def menu
-    puts "               View The Brewdog Catalog"
+    puts "             Welcome Brewdog's Beer Catalog"
     puts "_________________________________________________________"
     puts ""  
-    puts "            Below is our entire collection."
+    puts "      Below is a collection available for perusing"
     API.get_beers
     print_beers
     puts ""
     input = ""
     while input != "exit" do
-      puts "1) Type in beer index number to view more information about the beer"
-      puts "2) Or type 'exit' to leave program and start over"
+      puts "Type in beer index to learn about a beer"
+      puts "Type 'list' to see the list again"
+      puts "Or type 'exit' to leave program and start over"
       puts ""
       input = gets.strip
-      
+      API.get_beers(@name)
       puts Beer.all.name
       puts Beer.all.abv
       puts Beer.all.tagline
       puts Beer.all.description
-      puts Beer.all.food
   end
 end
  
