@@ -9,5 +9,9 @@ class API
     beers.each do |b|
       Beer.new(name: b["name"], abv: b["abv"], tagline: b["tagline"], description: b["description"], food: b["food"]) if b["name"] != ""
     end
-  #  binding.pry
+  end
+  
+  def self.get_info(beer)
+    url = "https://api.punkapi.com/v2/beers?#{name}"
+  end
 end

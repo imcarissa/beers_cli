@@ -1,16 +1,12 @@
 class CLI 
   
   def menu
-    puts ""
     puts "               View The Brewdog Catalog"
     puts "_________________________________________________________"
     puts ""  
     puts "            Below is our entire collection."
-    puts "" 
     API.get_beers
-#    binding.pry
     print_beers
-    puts ""
     puts ""
     input = ""
     while input != "exit" do
@@ -18,6 +14,7 @@ class CLI
       puts "2) Or type 'exit' to leave program and start over"
       puts ""
       input = gets.strip
+      
       puts Beer.all.name
       puts Beer.all.abv
       puts Beer.all.tagline
