@@ -11,15 +11,15 @@ class API
     end
   end
   
-  def self.get_beers_info(beer)
-    url = "https://api.punkapi.com/v2/beers?#{beer.index}"
+  def self.get_beer_info(info)
+    url = "https://api.punkapi.com/v2/beers/#{beer.index}"
     response = Net::HTTP.get(uri)
     beer_info = JSON.parse(response)
     
-    beer.name
-    beer.abv
-    beer.tagline
-    beer.description
-    beer.food_pairing
+    beer.name = beer_info["name"]
+    beer.abv = beer_info["abv"]
+    beer.tagline = beer_info["tagline"]
+    beer.description = beer_info["description"]
+    beer.food_pairing = beer_info["food_pairing"]
   end
 end

@@ -10,12 +10,12 @@ class CLI
     puts ""
     input = ""
     while input != "exit" do
-      puts "Type in beer index to learn about a beer"
+      puts "Enter a number from the list to learn more about it"
       puts "Type 'list' to see the list again"
       puts "Or type 'exit' to leave program and start over"
       puts ""
       input = gets.strip
-      API.get_beers(@name)
+    #  API.get_beers.select
       puts Beer.all.name
       puts Beer.all.abv
       puts Beer.all.tagline
