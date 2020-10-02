@@ -15,17 +15,12 @@ class CLI
       puts "Or type 'exit' to leave program and start over"
       puts ""
       prompt
-      if input == ''
-        puts Beer.all.name[0]
-        puts Beer.all.abv[0]
-        puts Beer.all.tagline[0]
-        puts Beer.all.description[1]
-      elsif input.to_i > 0 && input.to_i <= 24
-      API.get_beer_info
-      print_beers
+      if input == input.to_i > 0 && input.to_i <= 24
+      elsif
+        puts "Please enter a number from the list"
+      end
     end
   end
-end
 
   def prompt
     puts "Enter a number from the list to learn more about it"
