@@ -7,16 +7,17 @@ class API
     
     beers = JSON.parse(response)
     beers.each do |b|
-      Beer.new(name: b["name"], abv: b["abv"], style: b["style"], food: b["food"]) if b["name"] != ""
+      Beer.new(name: b["name"], abv: b["abv"], tagline: b["tagline"], description: b["description"], food: b["food"]) if b["name"] != ""
     end
   #  binding.pry
   end
   
-#  def self.get_beers(beer)
+# def self.get_beers(food)
 #   url = "https://api.punkapi.com/v2/beers?#{food}"
-#    uri = URI(url)
-#    response = Net::HTTP.get(uri)
-#    beer_info = JSON.parse(response)["beers"]
+#   uri = URI(url)
+#   response = Net::HTTP.get(uri)
+#   beer_info = JSON.parse(response)["beers"]
+#   beer_foodpairing = beer_info
 #  end
   
 end

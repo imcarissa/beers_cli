@@ -2,20 +2,22 @@ class CLI
   
   def menu
     puts ""
-    puts "What to Eat With What To Drink from Brewdog's Catalog"
+    puts "               View The Brewdog Catalog"
     puts "_________________________________________________________"
     puts ""  
-    puts ""
-    puts "Below is our entire collection."
+    puts "            Below is our entire collection."
     puts "" 
+    API.get_beers
+#    binding.pry
+    print_beers
+    puts ""
+    puts ""
     input = ""
     while input != "exit" do
-      puts "Type in beer index number to view more information about the beer"
-      puts "Or input a type of food (ex: eggs, spicy) to view beer pairings"
+      puts "1) Type in beer index number to view more information about the beer"
+      puts "2) Or type 'exit' to leave program and start over"
       puts ""
       input = gets.strip
-    API.get_beers
-    print_beers
   end
 end
  
@@ -24,5 +26,6 @@ end
     Beer.all.each.with_index(1) do |beer, index|
       puts "#{index}. #{beer.name}"
     end
+    puts ""
   end
 end
