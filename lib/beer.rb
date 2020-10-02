@@ -4,7 +4,11 @@ class Beer
   
   @@all = []
   
-  def initialize
+  def initialize(name:, abv:, description:, food_pairing:)
+    @name = name
+    @abv = abv
+    @description = description
+    @food_pairing = food_pairing
     @@all << self
   end
   
