@@ -1,17 +1,12 @@
 class CLI 
   
   def menu
-    puts "                 Bears, Beers, Battlestar Galactica"
-    puts ""
+    puts "                        Craft Beer Collection"
     puts "                  __________________________________"
     puts "" 
-    puts "          Beer Pairing App according to your Nerd Alter Ego"
-    puts ""
-    puts "              .=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=."
-    puts ""
-    puts "                        First must answer me" 
-    puts "                        These questions three" 
-    puts "                     Ere the other side s/he see. "
+    puts "          "
+    @abv_8 = gets.strip.downcase
+    API.get_beers(@abv_8)
   end
   
 end
