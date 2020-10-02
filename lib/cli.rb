@@ -3,7 +3,6 @@ class CLI
   def menu
     puts "                 Bears, Beers, Battlestar Galactica"
     puts ""
-    puts ""
     puts "                  __________________________________"
     puts "" 
     puts "          Beer Pairing App according to your Nerd Alter Ego"
