@@ -10,16 +10,12 @@ class CLI
     puts ""
     input = ""
     while input != "exit" do
-      puts "Enter a number from the list to learn more about it"
-      puts "Type 'list' to see the list again"
-      puts "Or type 'exit' to leave program and start over"
-      puts ""
-      prompt
-      if input == input.to_i > 0 && input.to_i <= 24
+    prompt
+ #     if input == input.to_i > 0 && input.to_i <= 24
       
-    else
-        puts "Please enter a number from the list"
-      end
+ #   else
+ #       puts "Please enter a number from the list"
+#      end
     end
   end
 
