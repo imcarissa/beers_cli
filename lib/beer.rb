@@ -17,8 +17,8 @@ class Beer
     @@all
   end
   
- # def self.find_by_abv(abv)
- #   self.all.select { |percent| percent.abv == abv }
- # end
+  def self.find_by_name(name)
+    self.all.select { |b| b.name == name }
+  end
   
 end

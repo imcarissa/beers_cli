@@ -18,6 +18,11 @@ class CLI
       puts "2) Or type 'exit' to leave program and start over"
       puts ""
       input = gets.strip
+      puts Beer.all.name
+      puts Beer.all.abv
+      puts Beer.all.tagline
+      puts Beer.all.description
+      puts Beer.all.food
   end
 end
  
