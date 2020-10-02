@@ -14,16 +14,24 @@ class CLI
       puts "Type 'list' to see the list again"
       puts "Or type 'exit' to leave program and start over"
       puts ""
-      input = gets.strip
-    #  API.get_beers.select
-      puts Beer.all.name
-      puts Beer.all.abv
-      puts Beer.all.tagline
-      puts Beer.all.description
+      prompt
+      if input == ''
+        puts Beer.all.name[0]
+        puts Beer.all.abv[0]
+        puts Beer.all.tagline[0]
+        puts Beer.all.description[1]
+      elsif input.to_i > 0 && input.to_i <= 24
+    end
   end
 end
- 
-#  binding.pry
+
+  def prompt
+    puts "Enter a number from the list to learn more about it"
+      puts "Type 'list' to see the list again"
+      puts "Or type 'exit' to leave program and start over"
+      puts ""
+ end
+
   def print_beers
     Beer.all.each.with_index(1) do |beer, index|
       puts "#{index}. #{beer.name}"
