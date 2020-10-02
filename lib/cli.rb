@@ -5,8 +5,12 @@ class CLI
     puts "                  __________________________________"
     puts "" 
     puts "          "
-    @abv_8 = gets.strip.downcase
-    API.get_beers(@abv_8)
+    @abv = gets.strip.downcase
+    API.get_beers(@abv)
+    beers = Beer.all 
+    beers.each.with_index(1) do |b, x|
+      puts "#{x}. #{b.name}"
+    end
   end
   
 end
