@@ -34,14 +34,11 @@ class CLI
   end
 end
 
-  def beer_details(info)
-    puts "Name: #{info.name}"
-    puts "ABV: #{info.abv}"
-    puts "Tagline: #{info.tagline}"
-    puts "Description: #{info.description}"
-    puts "Food Pairing: #{info.food_pairing}"
-  end
-  
-end
+ # def beer_details(info)
+ #   puts "Name: #{info.name}"
+ #   puts "ABV: #{info.abv}"
+ #   puts "Tagline: #{info.tagline}"
+#   puts "Food Pairing: #{info.food_pairing}"
+#  end
     
     
