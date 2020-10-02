@@ -4,7 +4,7 @@ class CLI
     puts "              Craft Beer Collection"
     puts "        ___________________________________"
     puts ""
-    puts "Type in the least ABV percentage you're looking for or type 'exit' to exit"
+    puts "Type in the least ABV percentage you're looking for, a type of food you'd like your beer paired for, or type 'exit' to exit"
     @abv = gets.strip
     API.get_beers(@abv)
     print_beers
