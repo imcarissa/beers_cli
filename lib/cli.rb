@@ -11,8 +11,7 @@ class CLI
     prompt
     input = gets.strip
     while input != "exit" do
-      input = gets.strip
-      if input.to_i > 0 && input.to_i >= 24
+      if input.to_i > 0 && input.to_i <= Beer.find_by_name(input).count
         
       elsif input 
     end
@@ -20,13 +19,13 @@ class CLI
 
 
   def prompt
-    puts "Enter a number from the list to learn more about it"
-    puts "Or type 'exit' to leave program and start over"
+    puts ""
+    puts "Enter a number from the list to learn more about it or type 'exit' to exit"
     puts ""
   end
 
   def print_beers
-    Beer.all.each.with_index(1) do |beer, index|
+    Beer.find_by_name(input).each.with_index(1) do |beer, index|
       puts "#{index}. #{beer.name}"
     end
     puts ""
