@@ -11,7 +11,6 @@ class CLI
     input = ""
     while input != "exit" do
       puts "Enter a number from the list to learn more about it"
-      puts "Type 'list' to see the list again"
       puts "Or type 'exit' to leave program and start over"
       puts ""
     end
