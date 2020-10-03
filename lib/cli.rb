@@ -4,7 +4,8 @@ class CLI
     puts " ======================================================="
     puts "____~*~__________________~*~_____________________~*~____"
     puts ""
-    puts "     What to Eat with What You Drink with Brewdog"
+    puts "           What to Eat with What You Drink"
+    puts "               with the Brewdog Catalog"
     puts "____~*~__________________________________________~*~____"
     puts ""
     puts "========================================================"
@@ -17,7 +18,7 @@ class CLI
     input = ""
     while input != "exit" do
       puts ""
-      puts "Enter a number from the list to learn more about it or type 'exit' to exit"
+      puts "Enter a number from our list to more about our selection or type 'exit' to exit"
       puts ""
       input = gets.strip
         if input.to_i > 0 && input.to_i <= 24
@@ -28,7 +29,7 @@ class CLI
           puts Beer.all[input.to_i-1].food_pairing
           puts ""
         elsif
-          puts "Go home, you're drunk. Enter a number from the list"
+          puts "          Go home buddy, you're drunk."
         end
     end
   end
