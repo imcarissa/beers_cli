@@ -1,10 +1,15 @@
 class CLI 
   
   def menu
-    puts "          Welcome To Brewdog's Beer Catalog"
-    puts "_________________________________________________________"
+    puts " ======================================================="
+    puts "____~*~__________________~*~_____________________~*~____"
+    puts ""
+    puts "     What to Eat with What You Drink with Brewdog"
+    puts "____~*~__________________________________________~*~____"
+    puts ""
+    puts "========================================================"
     puts ""  
-    puts "          Here is a list of our collection"
+    puts "   Get to know our menu including its food pairings"
     puts ""
     puts ""
     API.get_beers
