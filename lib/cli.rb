@@ -18,10 +18,10 @@ class CLI
     input = ""
     while input != "exit" do
       puts ""
-      puts "Enter a number from our list to more about our selection or type 'exit' to exit"
+      puts "Start again and put a number from our list or type 'exit' to exit"
       puts ""
       input = gets.strip
-        if input.to_i > 0 && input.to_i <= 24
+        if input.to_i > 0 && input.to_i <= 25
           puts Beer.all[input.to_i-1].name
           puts Beer.all[input.to_i-1].abv
           puts Beer.all[input.to_i-1].tagline
