@@ -9,6 +9,6 @@ class API
     beers.each do |b|
       Beer.new(name: b["name"], abv: b["abv"], tagline: b["tagline"], description: b["description"], food_pairing: b["food_pairing"]) if b["name"] != ""
     end
- end
+  end
  
 end

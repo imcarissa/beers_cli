@@ -8,12 +8,21 @@ class CLI
     API.get_beers
     print_beers
     puts ""
-    input = ""
+    prompt
+    input = gets.strip
     while input != "exit" do
-      puts "Enter a number from the list to learn more about it"
-      puts "Or type 'exit' to leave program and start over"
-      puts ""
+      input = gets.strip
+      if input.to_i > 0 && input.to_i >= 24
+        
+      elsif input 
     end
+  end
+
+
+  def prompt
+    puts "Enter a number from the list to learn more about it"
+    puts "Or type 'exit' to leave program and start over"
+    puts ""
   end
 
   def print_beers
