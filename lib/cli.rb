@@ -24,7 +24,6 @@ class CLI
           puts "  Go home buddy, you're drunk. Or try another number."
           puts ""
         end
-        input = gets.strip.downcase
     end
   end
   
