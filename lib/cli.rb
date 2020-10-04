@@ -14,17 +14,16 @@ class CLI
         if input.to_i > 0 && input.to_i <= Beer.all.length
           beer = Beer.all[input.to_i-1]
           print_beer_info(beer)
+          prompt
           input = gets.strip.downcase
-        elsif
-          if input == "beer me"
+        elsif input == "beer me"
             print_beers
-            input = gets.strip.downcase
+            prompt
         else
           puts ""
           puts "  Go home buddy, you're drunk. Or try another number."
           puts ""
         end
-        prompt
         input = gets.strip.downcase
     end
   end
