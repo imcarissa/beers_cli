@@ -1,4 +1,4 @@
-# No Beer = No Bueno. Know Beer = Know Bueno
+# Know Your Beer CLI
 This CLI app lets you know the intimate details about the beers from Brewdog Brewery including recommended food pairings.
 
 ## Installation
