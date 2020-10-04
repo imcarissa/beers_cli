@@ -14,6 +14,8 @@ class CLI
         if input.to_i > 0 && input.to_i <= Beer.all.length
           beer = Beer.all[input.to_i-1]
           print_beer_info(beer)
+          puts ""
+          prompt
         else
           puts ""
           puts "  Go home buddy, you're drunk. Or try another number."
