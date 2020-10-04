@@ -11,15 +11,13 @@ class CLI
     puts "========================================================"
     puts ""  
     puts "  Ever wanted to know what to eat with what you drink?"
+    puts "  Enter a number of our beer catalog to find out more"
     puts ""
     puts ""
     API.get_beers
     print_beers
     input = gets.strip.downcase
     while input != "exit" do
-      puts ""
-      puts " Enter a number of our beer catalog to find out more"
-      puts ""
       input = ""
         if input.to_i > 0 && input.to_i <= Beer.all.length
           puts Beer.all[input.to_i-1].name
@@ -30,7 +28,6 @@ class CLI
           puts ""
         elsif
           puts "          Go home buddy, you're drunk."
-        prompt
         end
     end
   end
