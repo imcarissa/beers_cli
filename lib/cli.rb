@@ -10,18 +10,18 @@ class CLI
     puts ""
     puts "========================================================"
     puts ""  
-    puts "  Get to know our selection complete with food pairings"
+    puts "  Ever wanted to know what to eat with what you drink?"
     puts ""
     puts ""
     API.get_beers
     print_beers
-    input = ""
+    input = gets.strip.downcase
     while input != "exit" do
       puts ""
-      puts "Start again and put a number from our list or type 'exit' to exit"
+      puts " Enter a number of our beer catalog to find out more"
       puts ""
-      input = gets.strip
-        if input.to_i > 0 && input.to_i <= 25
+      input = ""
+        if input.to_i > 0 && input.to_i <= Beer.all.length
           puts Beer.all[input.to_i-1].name
           puts Beer.all[input.to_i-1].abv
           puts Beer.all[input.to_i-1].tagline
@@ -30,10 +30,16 @@ class CLI
           puts ""
         elsif
           puts "          Go home buddy, you're drunk."
+        prompt
         end
     end
   end
 
+    def prompt
+      puts ""
+      puts "Type in a number from our list or type 'exit' to exit"
+      puts ""
+    end
 
   def print_beers
     Beer.all.each.with_index(1) do |beer, index|
