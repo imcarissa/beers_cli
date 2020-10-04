@@ -21,7 +21,6 @@ class CLI
         elsif 
           puts "  Go home buddy, you're drunk."
         end
-      end
     end
   end
   
