@@ -14,9 +14,11 @@ class CLI
         if input.to_i > 0 && input.to_i <= Beer.all.length
           beer = Beer.all[input.to_i-1]
           print_beer_info(beer)
-        elsif 
+        else
           puts "  Go home buddy, you're drunk. Or try another number."
         end
+        input = gets.strip
+      end
     end
   end
   
@@ -28,11 +30,13 @@ class CLI
     puts ""
   end
 
+
   def print_beers
     Beer.all.each.with_index(1) do |beer, index|
       puts "#{index}. #{beer.name}"
     end
   end
+  
   
   def print_beer_info(beer)
     puts "Name: #{beer.name}"
@@ -41,6 +45,7 @@ class CLI
     puts "Description: #{beer.description}"
     puts "Suggested Food Pairing: #{beer.food_pairing}"
   end
+  
 end
 
 
