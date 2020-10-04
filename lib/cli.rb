@@ -32,7 +32,7 @@ class CLI
     puts ""
     puts "  Enter another number to learn about it!"
     puts "  Type 'beer me' to see the selection again,"
-    puts "  ............................or type 'exit' to exit."
+    puts "  ...................or type 'exit' to exit."
     puts ""
   end
 
