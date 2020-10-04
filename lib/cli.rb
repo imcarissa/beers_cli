@@ -8,17 +8,14 @@ class CLI
     puts "" 
     API.get_beers
     print_beers
-    puts ""
-    puts "  Enter a number from the selection to find out more"
-    puts "  Or type 'exit' to exit"
-    puts ""
-    input = gets.strip
+    prompt
+    input = gets.strip.downcase
     while input != "exit" do
         if input.to_i > 0 && input.to_i <= Beer.all.length
           beer = Beer.all[input.to_i-1]
           print_beer_info(beer)
         elsif 
-          puts "  Go home buddy, you're drunk."
+          puts "  Go home buddy, you're drunk. Or try another number."
         end
     end
   end
@@ -26,6 +23,8 @@ class CLI
 
   def prompt
     puts ""
+    puts "  Enter a number from the selection to find out more"
+    puts "  Or type 'exit' to exit"
     puts ""
   end
 
