@@ -30,7 +30,7 @@ class CLI
 
   def prompt
     puts ""
-    puts "  Enter a number from the selection to find out more."
+    puts "  Enter another number to learn about it!"
     puts "  Type 'beer me' to see the selection again,"
     puts "  ............................or type 'exit' to exit."
     puts ""
