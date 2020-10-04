@@ -1,5 +1,5 @@
 # Know Your Beer CLI
-This CLI app lets you know the intimate details about the beers from Brewdog Brewery including recommended food pairings.
+This CLI app presents a collection of beers from Brewdog Brewery, with the option to know more intimate details about the beers like its ABV, tagline, and even recommended food pairings.
 
 ## Installation
 
