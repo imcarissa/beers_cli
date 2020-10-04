@@ -1,24 +1,20 @@
 class CLI 
   
   def menu
-    puts " ======================================================="
     puts "____~*~__________________~*~_____________________~*~____"
     puts ""
     puts "                Beer and Food Pairing"
     puts "              With the Brewdog Catalog"
     puts "____~*~__________________________________________~*~____"
-    puts ""
-    puts "========================================================"
     puts ""  
-    puts "  Ever wanted to know what to eat with what you drink?"
-    puts "  Enter a number of our beer catalog to find out more"
+    puts "  Enter a number from the selection below to find out more or 'exit' to exit"
     puts ""
-    puts ""
-    API.get_beers
+    @input = gets.strip.downcase
+    API.get_beers(@input)
     print_beers
-    input = gets.strip.downcase
-    while input != "exit" do
-      input = ""
+    prompt
+    input = ""
+      while input != "exit" do
         if input.to_i > 0 && input.to_i <= Beer.all.length
           puts Beer.all[input.to_i-1].name
           puts Beer.all[input.to_i-1].abv
@@ -29,6 +25,7 @@ class CLI
         elsif
           puts "          Go home buddy, you're drunk."
         end
+      end
     end
   end
 
@@ -42,6 +39,5 @@ class CLI
     Beer.all.each.with_index(1) do |beer, index|
       puts "#{index}. #{beer.name}"
     end
-    puts ""
   end
 end
