@@ -9,7 +9,7 @@ class CLI
     API.get_beers
     print_beers
     prompt
-    input = gets.strip
+    input = gets.strip.downcase
     while input != "exit" do
         if input.to_i > 0 && input.to_i <= Beer.all.length
           beer = Beer.all[input.to_i-1]
@@ -23,7 +23,7 @@ class CLI
           puts "  Did not get that.. type 'beer me' to see the list or try another number."
           puts ""
         end
-          input = gets.strip
+          input = gets.strip.downcase
     end
   end
   
@@ -51,9 +51,11 @@ class CLI
     puts ""
     puts "Tagline: ..........#{beer.tagline}.........."
     puts ""
-    puts "Description: #{beer.description}"
+    puts "Description:"
+    puts "#{beer.description}"
     puts ""
-    puts "Suggested Food Pairing: #{beer.food_pairing}"
+    puts "Suggested Food Pairing:"
+    puts "#{beer.food_pairing}"
   end
   
 end
