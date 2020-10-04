@@ -9,13 +9,12 @@ class CLI
     API.get_beers
     print_beers
     prompt
-    input = gets.strip.downcase
+    input = gets.strip
     while input != "exit" do
         if input.to_i > 0 && input.to_i <= Beer.all.length
           beer = Beer.all[input.to_i-1]
           print_beer_info(beer)
           prompt
-          input = gets.strip.downcase
         elsif input == "beer me"
             print_beers
             prompt
@@ -24,6 +23,7 @@ class CLI
           puts "  Go home buddy, you're drunk. Or try another number."
           puts ""
         end
+          input = gets.strip
     end
   end
   
