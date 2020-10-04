@@ -12,18 +12,13 @@ class CLI
     puts "  Enter a number from the selection to find out more"
     puts "  Or type 'exit' to exit"
     puts ""
-    input = ""
-    while input != "exit"
-      if input.to_i > 0 && input.to_i <= Beer.all.length
-        beer = Beer.all[input.to_i-1]
-        #  puts Beer.all[input.to_i-1].name
-       #   puts Beer.all[input.to_i-1].abv
-       #   puts Beer.all[input.to_i-1].tagline
-       #   puts Beer.all[input.to_i-1].description
-       #   puts Beer.all[input.to_i-1].food_pairing
-       #   puts ""
-      elsif
-         puts "          Go home buddy, you're drunk."
+    input = gets.strip.downcase
+      while input != "exit"
+        if input.to_i > 0 && input.to_i <= Beer.all.length
+          puts Beer.all[input.to_i-1].name
+        elsif
+          puts "  Go home buddy, you're drunk."
+        end
       end
     end
   end
@@ -36,3 +31,13 @@ class CLI
   end
 
 end
+
+
+
+
+ #  puts Beer.all[input.to_i-1].name
+       #   puts Beer.all[input.to_i-1].abv
+       #   puts Beer.all[input.to_i-1].tagline
+       #   puts Beer.all[input.to_i-1].description
+       #   puts Beer.all[input.to_i-1].food_pairing
+       #   puts ""
