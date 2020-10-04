@@ -13,10 +13,14 @@ gem install httparty
 
 ## How To Use
 
-To start, enter .bin/beer_list in your terminal.
+Run the code below in your terminal to start.
+
+```ruby
+ruby bin/beer_list
+```
 
 You will be presented with a collection of beers featured by Brewdog Brewery.
-Follow the prompts to decide how to learn the details about an individual beer.
+Follow the prompts on how to learn the details about an individual beer.
 
 ## Where to find this code:
 
