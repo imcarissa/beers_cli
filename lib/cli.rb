@@ -8,16 +8,15 @@ class CLI
     puts "" 
     API.get_beers
     print_beers
-    prompt
-    input = gets.strip.downcase
-    while input != "exit"
+    puts ""
+    puts "  Enter a number from the selection to find out more"
+    puts "  Or type 'exit' to exit"
+    puts ""
+    input = gets.strip
+    while input != "exit" do
         if input.to_i > 0 && input.to_i <= Beer.all.length
-          puts Beer.all[input.to_i-1].name
-          puts Beer.all[input.to_i-1].abv
-          puts Beer.all[input.to_i-1].tagline
-          puts Beer.all[input.to_i-1].description
-          puts Beer.all[input.to_i-1].food_pairing
-          puts ""
+          beer = Beer.all[input.to_i-1]
+          print_beer_info(beer)
         elsif 
           puts "  Go home buddy, you're drunk."
         end
@@ -27,8 +26,6 @@ class CLI
 
   def prompt
     puts ""
-    puts "  Enter a number from the selection to find out more"
-    puts "  Or type 'exit' to exit"
     puts ""
   end
 
@@ -38,4 +35,19 @@ class CLI
     end
   end
   
+  def print_beer_info(beer)
+    puts "Name: #{beer.name}"
+    puts "ABV: #{beer.abv}"
+    puts "Tagline: #{beer.tagline}"
+    puts "Description: #{beer.description}"
+    puts "Suggested Food Pairing: #{beer.food_pairing}"
+  end
 end
+
+
+
+     #     puts Beer.all[input.to_i-1].name
+     #     puts Beer.all[input.to_i-1].abv
+     #     puts Beer.all[input.to_i-1].tagline
+     #     puts Beer.all[input.to_i-1].description
+     #     puts Beer.all[input.to_i-1].food_pairing
