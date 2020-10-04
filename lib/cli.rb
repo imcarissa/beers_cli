@@ -19,6 +19,7 @@ class CLI
           puts "  Go home buddy, you're drunk. Or try another number."
           puts ""
         end
+        prompt
         input = gets.strip
     end
   end
@@ -42,9 +43,13 @@ class CLI
   def print_beer_info(beer)
     puts "Name: #{beer.name}"
     puts "ABV: #{beer.abv}"
-    puts "Tagline: #{beer.tagline}"
+    puts ""
+    puts "Tagline: ..........#{beer.tagline}.........."
     puts "Description: #{beer.description}"
+    puts ""
     puts "Suggested Food Pairing: #{beer.food_pairing}"
+    puts ""
+    puts ""
   end
   
 end
