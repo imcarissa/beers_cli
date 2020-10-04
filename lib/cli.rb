@@ -15,10 +15,11 @@ class CLI
           beer = Beer.all[input.to_i-1]
           print_beer_info(beer)
         else
+          puts ""
           puts "  Go home buddy, you're drunk. Or try another number."
+          puts ""
         end
         input = gets.strip
-      end
     end
   end
   
