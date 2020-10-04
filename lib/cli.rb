@@ -32,9 +32,9 @@ class CLI
 
   def prompt
     puts ""
-    puts "  Enter a number to learn more about a beer"
-    puts "  Type 'beer me' to see the selection again,"
-    puts "  ...................or type 'exit' to exit."
+    puts "       Enter a number to learn more about a beer"
+    puts "       Type 'beer me' to see the selection again,"
+    puts "       ...................or type 'exit' to exit."
     puts ""
   end
 
