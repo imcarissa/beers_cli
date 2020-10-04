@@ -14,21 +14,27 @@ class CLI
         if input.to_i > 0 && input.to_i <= Beer.all.length
           beer = Beer.all[input.to_i-1]
           print_beer_info(beer)
+          input = gets.strip.downcase
+        elsif
+          if input == "beer me"
+            print_beers
+            input = gets.strip.downcase
         else
           puts ""
           puts "  Go home buddy, you're drunk. Or try another number."
           puts ""
         end
         prompt
-        input = gets.strip
+        input = gets.strip.downcase
     end
   end
   
 
   def prompt
     puts ""
-    puts "  Enter a number from the selection to find out more"
-    puts "  Or type 'exit' to exit"
+    puts "  Enter a number from the selection to find out more."
+    puts "  Type 'beer me' to see the selection again,"
+    puts "  ............................or type 'exit' to exit."
     puts ""
   end
 
@@ -53,11 +59,3 @@ class CLI
   end
   
 end
-
-
-
-     #     puts Beer.all[input.to_i-1].name
-     #     puts Beer.all[input.to_i-1].abv
-     #     puts Beer.all[input.to_i-1].tagline
-     #     puts Beer.all[input.to_i-1].description
-     #     puts Beer.all[input.to_i-1].food_pairing
