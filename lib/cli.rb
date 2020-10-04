@@ -20,7 +20,7 @@ class CLI
             prompt
         else
           puts ""
-          puts "  Go home buddy, you're drunk. Or try another number."
+          puts "  Did not get that.. type 'beer me' to see the list or try another number."
           puts ""
         end
           input = gets.strip
