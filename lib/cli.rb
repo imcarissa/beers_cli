@@ -20,8 +20,8 @@ class CLI
             prompt
         else
           puts ""
-          puts "  Go home buddy, you're drunk. Try another number."
-          puts "Type 'beer me' to see the list again."
+          puts "    <(``,<)  Go home buddy, you're drunk. Try another number. (>,``)>"
+          puts "    Type 'beer me' to see the list again."
           puts ""
         end
           input = gets.strip.downcase
