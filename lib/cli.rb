@@ -12,7 +12,8 @@ class CLI
     input = ""
     while input != "exit" do
     puts ""
-    puts "  Enter a number from the selection below to find out more or 'exit' to exit"
+    puts "  Enter a number from the selection to find out more"
+    puts "  Or type 'exit' to exit"
     puts ""
     input = gets.strip.downcase
         if input.to_i > 0 && input.to_i <= Beer.all.length
@@ -24,6 +25,8 @@ class CLI
           puts ""
         elsif
           puts "          Go home buddy, you're drunk."
+        else
+          "Bye!"
         end
       end
   end
