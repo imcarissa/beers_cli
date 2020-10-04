@@ -18,6 +18,8 @@ class CLI
         elsif input == "beer me"
             print_beers
             prompt
+        elsif input == "exit"
+            puts "Go home buddy, you're drunk."
         else
           puts ""
           puts "  Did not get that.. type 'beer me' to see the list or try another number."
