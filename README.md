@@ -1,6 +1,6 @@
-# Beer and Food Pairing Collection CLI
-
-This CLI app lets you know the intimate details about the beers from Brewdog Brewery including food pairings.
+# No Beer = No Bueno
+# Know Beer = Know Bueno
+This CLI app lets you know the intimate details about the beers from Brewdog Brewery including recommended food pairings.
 
 ## Installation
 
