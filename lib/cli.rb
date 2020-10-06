@@ -1,11 +1,13 @@
 class CLI 
   
   def menu
-    puts "   ____~*~____________~*~____________~*~____"
     puts ""
-    puts "    You are viewing Brewdog's Beer Catalog"
     puts ""
-    puts "   ____~*~___________________________~*~____"
+    puts "  ____~*~____________~*~____________~*~____"
+    puts ""
+    puts "   You are viewing Brewdog's Beer Catalog"
+    puts ""
+    puts "  ____~*~___________________________~*~____"
     puts "" 
     API.get_beers
     print_beers

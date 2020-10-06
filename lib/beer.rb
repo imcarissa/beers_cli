@@ -17,8 +17,8 @@ class Beer
     @@all
   end
   
-  def self.find_by_name(input)
-    self.all.select { |b| b.name == name }
-  end
+#  def self.find_by_name(input)
+#    self.all.select { |b| b.name == name }
+#  end
   
 end
