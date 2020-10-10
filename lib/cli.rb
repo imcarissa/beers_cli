@@ -67,6 +67,7 @@ class CLI
     puts "    (>,``)>  Go home buddy, you're drunk. Try another number."
     puts "              Type 'beer me' to see the list again.  "
     puts "                   Type 'exit' to close out.          <(``,<)"
+    puts ""
   end
   
 end
