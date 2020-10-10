@@ -22,10 +22,7 @@ class CLI
             print_beers
             prompt
         else
-          puts ""
-          puts "    (>,``)>  Go home buddy, you're drunk. Try another number."
-          puts "              Type 'beer me' to see the list again.  <(``,<)"
-          puts ""
+            closer
         end
           input = gets.strip.downcase
     end
@@ -35,8 +32,10 @@ class CLI
   def prompt
     puts ""
     puts "       Enter a number to learn more about a beer"
+    puts "                          or"
     puts "       Type 'beer me' to see the selection again,"
-    puts "       ...................or type 'exit' to exit."
+    puts "                          or"
+    puts "       ......................type 'exit' to exit."
     puts ""
   end
 
@@ -62,4 +61,10 @@ class CLI
     puts "#{beer.food_pairing}"
   end
   
+  def closer
+    puts ""
+    puts "    (>,``)>  Go home buddy, you're drunk. Try another number."
+    puts "              Type 'beer me' to see the list again.  <(``,<)"
+    puts ""
+  end
 end
