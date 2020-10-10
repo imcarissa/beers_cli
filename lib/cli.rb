@@ -28,6 +28,13 @@ class CLI
     end
   end
   
+  
+  def print_beers
+    Beer.all.each.with_index(1) do |beer, index|
+      puts "#{index}. #{beer.name}"
+    end
+  end
+  
 
   def prompt
     puts ""
@@ -37,13 +44,6 @@ class CLI
     puts "                          or"
     puts "       ......................type 'exit' to exit."
     puts ""
-  end
-
-
-  def print_beers
-    Beer.all.each.with_index(1) do |beer, index|
-      puts "#{index}. #{beer.name}"
-    end
   end
   
   
@@ -61,10 +61,12 @@ class CLI
     puts "#{beer.food_pairing}"
   end
   
+  
   def closer
     puts ""
     puts "    (>,``)>  Go home buddy, you're drunk. Try another number."
-    puts "              Type 'beer me' to see the list again.  <(``,<)"
-    puts ""
+    puts "              Type 'beer me' to see the list again.  "
+    puts "                   Type 'exit' to close out.          <(``,<)"
   end
+  
 end
