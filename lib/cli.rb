@@ -38,7 +38,6 @@ class CLI
       puts "#{index}. #{beer.name}"
     end
   end
-  
 
   def prompt
     puts ""
