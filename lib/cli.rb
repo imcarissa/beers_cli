@@ -2,13 +2,17 @@ class CLI
   
   def menu
     puts ""
+    puts "*|**********************************************|*"
+    puts "*|*____~*~_____________~*~______________~*~____*|*"
+    puts "*|*                                            *|*"
+    puts "*|*   You are Viewing Brewdog's Beer Catalog   *|*"
+    puts "*|*                                            *|*"
+    puts "*|*       (>,'')>    <('.')>    <('',<)        *|*"
+    puts "*|*                                            *|*"
+    puts "*|*___________~*~_______________~*~____________*|*"
+    puts "*|*                                            *|*"
+    puts "*|**********************************************|*"
     puts ""
-    puts "  ____~*~____________~*~____________~*~____"
-    puts ""
-    puts "   You are viewing Brewdog's Beer Catalog"
-    puts ""
-    puts "  ____~*~___________________________~*~____"
-    puts "" 
     API.get_beers
     print_beers
     prompt
@@ -38,11 +42,11 @@ class CLI
 
   def prompt
     puts ""
-    puts "       Enter a number to learn more about a beer"
-    puts "                          or"
-    puts "       Type 'beer me' to see the selection again,"
+    puts "       Enter a number to learn more about a beer!"
     puts "                          or"
     puts "       ......................type 'exit' to exit."
+    puts ""
+    puts "       Type 'beer me' to see the selection again."
     puts ""
   end
   
@@ -64,7 +68,7 @@ class CLI
   
   def closer
     puts ""
-    puts "    (>,``)>  Go home buddy, you're drunk. Try another number."
+    puts "    (>,`')>  Go home buddy, you're drunk. Try another number."
     puts "              Type 'beer me' to see the list again.  "
     puts "                   Type 'exit' to close out.          <(``,<)"
     puts ""
