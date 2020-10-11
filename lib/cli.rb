@@ -42,9 +42,9 @@ class CLI
 
   def prompt
     puts ""
-    puts "       Enter a number to learn more about a beer!"
-    puts "                          or"
-    puts "       ......................type 'exit' to exit."
+    puts ""
+    puts "       Enter a number from this list to learn more about a beer."
+    puts "       ..................................or type 'exit' to exit."
     puts ""
     puts "       Type 'beer me' to see the selection again."
     puts ""
@@ -68,9 +68,11 @@ class CLI
   
   def closer
     puts ""
-    puts "    (>,`')>  Go home buddy, you're drunk. Try another number."
-    puts "              Type 'beer me' to see the list again.  "
-    puts "                   Type 'exit' to close out.          <(``,<)"
+    puts "      (>,`')>  Go home buddy, you're drunk."
+    puts ""
+    puts "              - Try a number from the list!"
+    puts "              - Type 'beer me' to see the list again."
+    puts "              - Type 'exit' to close your tab.  <('',<)"
     puts ""
   end
   
