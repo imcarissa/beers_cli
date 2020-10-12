@@ -17,21 +17,26 @@ class CLI
     print_beers
     prompt
     input = gets.strip.downcase
-    while input != "exit" do
+    while input != "exit" do                                 
         if input.to_i > 0 && input.to_i <= Beer.all.length
           beer = Beer.all[input.to_i-1]
           print_beer_info(beer)
           prompt
         elsif input == "beer me"
-            print_beers
-            prompt
+          print_beers
+          prompt
         else
-          closer
+            puts ""
+            puts "   (>,`')>  Go home buddy, you're drunk. Try a number from the list!"
+            puts ""
+            puts "            - See the list again? Type 'beer me'."
+            puts "            - Type 'exit' to close your tab."
+            puts ""
         end
           input = gets.strip.downcase
     end
     puts ""
-    puts "       Don't forget to tip your bartender!  $<('',<)"
+    puts "  Don't forget to tip your bartender!  $<('',<)"
     puts ""
   end
   
@@ -43,14 +48,12 @@ class CLI
 
   def prompt
     puts ""
-    puts ""
     puts "          Enter a number from this list to learn more about a beer."
     puts "          ..................................or type 'exit' to exit."
     puts ""
     puts "          Type 'beer me' to see the selection again."
     puts ""
   end
-  
   
   def print_beer_info(beer)
     puts "Name: #{beer.name}"
@@ -65,15 +68,5 @@ class CLI
     puts "Suggested Food Pairing:"
     puts "#{beer.food_pairing}"
   end
-  
-  
-  def closer
-    puts ""
-    puts "   (>,`')>  Go home buddy, you're drunk. Try a number from the list!"
-    puts ""
-    puts "            - See the list again? Type 'beer me'."
-    puts "            - Type 'exit' to close your tab."
-    puts ""
-  end
-  
+
 end
