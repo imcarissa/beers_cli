@@ -27,16 +27,13 @@ class CLI
           prompt
         else
             puts ""
-            puts "   (>,`')>  Go home buddy, you're drunk. Try a number from the list!"
-            puts ""
-            puts "            - See the list again? Type 'beer me'."
-            puts "            - Type 'exit' to close your tab."
-            puts ""
+            puts "   (>,`')>  Go home buddy, you're drunk."
+            prompt
         end
           input = gets.strip.downcase
     end
     puts ""
-    puts "  Don't forget to tip your bartender!  $<('',<)"
+    puts "     Don't forget to tip your bartender!  $<('',<)"
     puts ""
   end
   
