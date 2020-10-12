@@ -23,15 +23,17 @@ class CLI
           print_beer_info(beer)
           prompt
         elsif input == "beer me"
-            print_beers
-            prompt
+          print_beers
+          prompt
         else
-            closer
+          closer
         end
           input = gets.strip.downcase
     end
+    puts ""
+    puts "       Don't forget to tip your bartender!  $<('',<)"
+    puts ""
   end
-  
   
   def print_beers
     Beer.all.each.with_index(1) do |beer, index|
@@ -42,10 +44,10 @@ class CLI
   def prompt
     puts ""
     puts ""
-    puts "       Enter a number from this list to learn more about a beer."
-    puts "       ..................................or type 'exit' to exit."
+    puts "          Enter a number from this list to learn more about a beer."
+    puts "          ..................................or type 'exit' to exit."
     puts ""
-    puts "       Type 'beer me' to see the selection again."
+    puts "          Type 'beer me' to see the selection again."
     puts ""
   end
   
@@ -67,11 +69,10 @@ class CLI
   
   def closer
     puts ""
-    puts "      (>,`')>  Go home buddy, you're drunk."
+    puts "   (>,`')>  Go home buddy, you're drunk. Try a number from the list!"
     puts ""
-    puts "              - Try a number from the list!"
-    puts "              - Type 'beer me' to see the list again."
-    puts "              - Type 'exit' to close your tab.  <('',<)"
+    puts "            - See the list again? Type 'beer me'."
+    puts "            - Type 'exit' to close your tab."
     puts ""
   end
   
