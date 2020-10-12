@@ -23,8 +23,8 @@ class CLI
           print_beer_info(beer)
           prompt
         elsif input == "beer me"
-          print_beers
-          prompt
+            print_beers
+            prompt
         else
           closer
         end
