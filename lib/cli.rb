@@ -23,8 +23,8 @@ class CLI
           print_beer_info(beer)
           prompt
         elsif input == "beer me"
-          print_beers
-          prompt
+            print_beers
+            prompt
         else
             puts ""
             puts "   (>,`')>  Go home buddy, you're drunk."
@@ -37,20 +37,22 @@ class CLI
     puts ""
   end
   
+  
   def print_beers
     Beer.all.each.with_index(1) do |beer, index|
       puts "#{index}. #{beer.name}"
     end
   end
 
+  
   def prompt
     puts ""
-    puts "          Enter a number from this list to learn more about a beer."
-    puts "          ..................................or type 'exit' to exit."
-    puts ""
-    puts "          Type 'beer me' to see the selection again."
+    puts "            - Try a number from the list!"
+    puts "            - See the list again? Type 'beer me'."
+    puts "            - Type 'exit' to close your tab."
     puts ""
   end
+  
   
   def print_beer_info(beer)
     puts "Name: #{beer.name}"
