@@ -13,18 +13,21 @@ class CLI
     puts "*|*                                            *|*"
     puts "*|**********************************************|*"
     puts ""
+    
+# this is the executable to run the menu method on the object
+# it uses the 2 gems in the API class to make the get request from the URL, then parses the string into a json object
+# the parsed response return is iterated through each beer and creates the objects with attributes retquested from the API
     API.get_beers
     print_beers
-    prompt
+    
+# downcase idiot-proofs the input so the program doesnt error out based on capitalization mistakes on the user's part
     input = gets.strip.downcase
     while input != "exit" do                                 
         if input.to_i > 0 && input.to_i <= Beer.all.length
           beer = Beer.all[input.to_i-1]
           print_beer_info(beer)
-          prompt
         elsif input == "beer me"
             print_beers
-            prompt
         else
             puts ""
             puts "   (>,`')>  Go home buddy, you're drunk."
@@ -42,6 +45,7 @@ class CLI
     Beer.all.each.with_index(1) do |beer, index|
       puts "#{index}. #{beer.name}"
     end
+    prompt
   end
 
   
@@ -66,6 +70,8 @@ class CLI
     puts ""
     puts "Suggested Food Pairing:"
     puts "#{beer.food_pairing}"
+    puts ""
+    prompt
   end
-
+  
 end

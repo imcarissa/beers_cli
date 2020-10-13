@@ -1,5 +1,10 @@
+# shebang file. ruby enviroment
+
 #!usr/bin/env ruby
 
 require_relative '../config/environment'
 
+
+# .new the class method that instantiates on the CLI class to make new objects
+# .menu the instance method calls on .new instance
 CLI.new.menu
