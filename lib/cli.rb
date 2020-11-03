@@ -43,6 +43,8 @@ class CLI
     puts ""
     puts "     Don't forget to tip your bartender!  $<('',<)"
     puts ""
+    puts "     Thanks! Come use us again!"
+    puts ""
   end
   
   
