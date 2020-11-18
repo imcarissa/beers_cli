@@ -29,13 +29,11 @@ class CLI
         elsif input == "beer me"
           print_beers
           prompt
-        elsif input == "one more round"
-          prompt
         else
           puts ""
           puts "      (>,`')>  Go home buddy, you're drunk."
           puts ""
-          puts "       Say 'one more round' to see options again."
+          prompt
           puts ""
         end
           input = gets.strip.downcase
