@@ -17,6 +17,7 @@ class CLI
     print_beers
     puts ""
     puts "For your first round, enter a number from the list to learn more about it"
+    puts "Or type 'exit' to leave the program"    
     puts ""
     input = gets.strip.downcase
     while input != "exit" do
