@@ -32,7 +32,8 @@ class CLI
           prompt
         else
           puts ""
-          puts "      (>,`')>  Go home buddy, you're drunk."
+          puts ""
+          puts "        (>,`')>  Go home buddy, you're drunk."
           puts ""
           prompt
           puts ""
@@ -65,10 +66,12 @@ class CLI
 
   
   def prompt
+    puts "        OPTIONS:"
+    puts "        => Type a number from the list to know more about a beer!"
     puts ""
-    puts "      - Type a number from the list to know more about a beer!"
-    puts "      - Type 'feed me' to see only the food pairing suggestion list."
-    puts "      - Type 'beer me' to see the list again."
+    puts "        => Type 'feed me' to see only the food pairing suggestion list."
+    puts "        => Type 'beer me' to see the list again."
+    puts ""
     puts "      - ...........................Type 'exit' to close your tab."
     puts ""
   end

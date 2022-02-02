@@ -17,8 +17,8 @@ class Beer
     @@all
   end
   
-  def self.sort
-    self.all.sort_by { |beer| beer.name }
-  end
+  # def self.sort
+  #  self.all.sort_by { |beer| beer.name }
+  # end
 	
 end
